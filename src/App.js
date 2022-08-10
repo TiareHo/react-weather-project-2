@@ -7,6 +7,7 @@ function App() {
       <div className="container">
       <h1>Weather Report
       </h1>
+      <h2> World weather, on demand</h2>
       <p>This page is open-sourced via <a class="btn btn-primary" href="https://getbootstrap.com/docs/4.0/components/buttons/">BootstrapTEST</a> and hosted on {" "}         
          <a href="https://reactjs.org"
           target="_blank"
