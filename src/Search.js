@@ -17,7 +17,7 @@ export default function Search() {
     return( 
         <div className="container">
             <form onSubmit={handleSubmit}>
-              <input type="search" placeholder="Type a city..." id="userSearchedCity" onChange={updateCity}/>
+              <input type="search" placeholder="Search the weather in a city..." id="userSearchedCity" onChange={updateCity}/>
               <button type="submit"> > </button> 
                 </form>
         </div>);}

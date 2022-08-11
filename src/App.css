@@ -1,3 +1,7 @@
+:root {
+ --accent-color: #dcdc0d;
+}
+
 .App {
    background-color:#dcdce0;
   min-height: 100vh;
@@ -5,4 +9,5 @@
   flex-direction: column;
   
 }
+
 

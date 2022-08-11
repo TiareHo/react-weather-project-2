@@ -1,12 +1,46 @@
-#main-temperature {
-    font-size: 60px;
-    color: grey;
-    margin-top: 10px;
+div.container {
+    max-width:800px;
+}
+span.main-temperature {
+    font-size: 85px;
+    line-height: 100px;;
+    color: var(--accent-color);
+}
 
+span.temperature-units {
+   color: grey;
+   position: relative;
+   top: -40px;
+   line-height: 100px;
+   display:inline-block;
+  
+}
+img {
+    max-height:300px;
+    max-width: 300px;
+    margin: 0 auto;
+    display:block;
+   
 }
 div.row {
     border-radius: 10px;
 }
 footer {
     padding-top: 10px;
+    color: grey;
+}
+@media only screen and (max-width: 767px) {
+    img {
+       display:none;
+    }
+    div.container {
+        max-width:400px;
+    }
+    p, div.main-temperature-and-units {
+        text-align: center;
+    }
+    ul {
+        padding-top: 20px;
+    }
+    
 }
