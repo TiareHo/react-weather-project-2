@@ -1,0 +1,39 @@
+:root {
+    --accent-color:#dcdc0d;
+}
+
+form {
+background-color: white;
+border-radius: 30px;
+padding: 5px 20px 5px 20px;
+margin: 10px;
+font-size: 20px;
+
+}
+input, button {
+    border: none;
+    outline: none;
+    justify-content: center; 
+    padding:10px;
+}
+
+input {
+    color: var(--accent-color);
+    flex:1;
+
+}
+button {
+   float: right;
+   background-color: white;
+}
+button:hover {
+    background-color: var(--accent-color);
+
+}
+
+@media only screen and (min-width: 700px) {
+    form {
+       
+        max-width: 350px;
+    }
+}
