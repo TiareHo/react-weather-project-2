@@ -26,8 +26,9 @@ button {
    float: right;
    background-color: white;
 }
+
 button:hover {
-    background-color: var(--accent-color);
+    color: var(--accent-color);
 
 }
 
