@@ -1,9 +1,12 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Weather.css";
 import "./App.css";
 
 function Weather() {
-    return (
+  const [weatherData, setWeatherData]=useState({ready:false});
+  
+    if (weatherData.ready){
+      return (
        <div className="container"> 
      
        
@@ -40,7 +43,9 @@ function Weather() {
            </a>
           </footer>
           </div>
-    );
+    );} else {
+      return "Searching.....";
+    }
     }
 
     export default Weather;
