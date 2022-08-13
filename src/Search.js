@@ -11,7 +11,14 @@ function handleResponse(response) {
   setWeatherData({
     ready:true,
     city:response.data.name,
-    temperature:response.data.main.temp,});}
+    temperature:response.data.main.temp,
+    temp_max:response.data.main.temp_max,
+    temp_min: response.data.main.temp_min,
+    humidity:response.data.main.humidity,
+    barometer:response.data.main.pressure,
+    wind:response.data.wind.speed,
+    wind_direction: response.data.wind.deg,
+  });}
   
   function handleSubmit(event){
     event.preventDefault();

@@ -5,7 +5,7 @@ import Search from './Search';
 function App() {
   return (
     <div className="App">
-       <Search defaultCity="Miami" />
+       <Search defaultCity="Santa Barbara" />
     </div>
   );
 }

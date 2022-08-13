@@ -2,6 +2,7 @@ import React from "react";
 import "./Weather.css";
 import "./App.css";
 
+
 function Weather(props) {
 return(
        <div className="container"> 
@@ -10,23 +11,23 @@ return(
        <h1>{props.data.city}</h1>
        <div className="row bg-white p-4">
         <div className="col-md-3">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuF48SdIZwtV02HTxw1xEHWBs4PoL9eN3bqYCsb89iH-2KSpjdJvs33hLoUxuCgIRk1HM&usqp=CAU" class="card-img" alt="sunshine"/>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuF48SdIZwtV02HTxw1xEHWBs4PoL9eN3bqYCsb89iH-2KSpjdJvs33hLoUxuCgIRk1HM&usqp=CAU" className="card-img" alt="sunshine"/>
         </div>
         <div className="col-md-4">
           <div className="card-body">
             <h5 className="card-title mb-4">Tuesday 3:55PM</h5>
-            <div className="main-temperature-and-units"><span className="card-text main-temperature">{props.data.temnperature}</span>
+            <div className="main-temperature-and-units"><span className="card-text main-temperature">{Math.round(props.data.temperature)}</span>
             <span className="temperature-units">°F</span></div>
             <p className="card-text mt-2">Mostly Sunny</p>
           </div>
         </div>
         <div className="col-md-5">
           <ul className="list-group">
-            <li className="list-group-item">Daytime High: 75°</li>
-            <li className="list-group-item">Daytime Low: 70°</li>
-            <li className="list-group-item">Wind Speed: 10 mph</li>
-            <li className="list-group-item">Humidity: 30%</li>
-            <li className="list-group-item">Barometer: 30 inHg</li>
+            <li className="list-group-item">Daytime High: {Math.round(props.data.temp_max)}°</li>
+            <li className="list-group-item">Daytime Low: {Math.round(props.data.temp_min)}°</li>
+            <li className="list-group-item">Wind Speed: {Math.round(props.data.wind)} mph @ {props.data.wind_direction}°</li>
+            <li className="list-group-item">Humidity: {props.data.humidity}%</li>
+            <li className="list-group-item">Barometer:  {Math.round(props.data.barometer*0.02953)} inHg</li>
           </ul>
         </div>
        </div>
