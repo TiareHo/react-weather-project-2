@@ -1,16 +1,13 @@
-import React, {useState} from "react";
+import React from "react";
 import "./Weather.css";
 import "./App.css";
 
-function Weather() {
-  const [weatherData, setWeatherData]=useState({ready:false});
-  
-    if (weatherData.ready){
-      return (
+function Weather(props) {
+return(
        <div className="container"> 
      
        
-       <h1>Santa Barbara, CA</h1>
+       <h1>{props.data.city}</h1>
        <div className="row bg-white p-4">
         <div className="col-md-3">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuF48SdIZwtV02HTxw1xEHWBs4PoL9eN3bqYCsb89iH-2KSpjdJvs33hLoUxuCgIRk1HM&usqp=CAU" class="card-img" alt="sunshine"/>
@@ -18,7 +15,7 @@ function Weather() {
         <div className="col-md-4">
           <div className="card-body">
             <h5 className="card-title mb-4">Tuesday 3:55PM</h5>
-            <div className="main-temperature-and-units"><span className="card-text main-temperature">70</span>
+            <div className="main-temperature-and-units"><span className="card-text main-temperature">{props.data.temnperature}</span>
             <span className="temperature-units">°F</span></div>
             <p className="card-text mt-2">Mostly Sunny</p>
           </div>
@@ -43,9 +40,6 @@ function Weather() {
            </a>
           </footer>
           </div>
-    );} else {
-      return "Searching.....";
-    }
-    }
+    );} 
 
     export default Weather;
