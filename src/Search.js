@@ -3,12 +3,15 @@ import './Search.css';
 import axios from "axios";
 import Weather from './Weather';
 
+
 export default function Search(props) {
   const [weatherData, setWeatherData]=useState({ready:false});
   const [city, setCity]=useState(props.defaultCity);
-    
+ 
+  
+
 function handleResponse(response) {
-  console.log(response.data);
+  console.log(response.data.dt);
   setWeatherData({
     ready:true,
     city:response.data.name,
@@ -20,7 +23,9 @@ function handleResponse(response) {
     wind:response.data.wind.speed,
     wind_direction: response.data.wind.deg,
     country: response.data.sys.country,
-  });}
+    date: response.data.dt,
+  });
+}
   
   function handleSubmit(event){
     event.preventDefault();
@@ -48,6 +53,7 @@ function handleResponse(response) {
                   </form>
           </div>
           <Weather data={weatherData} />
+        
           </div>);} else {
           searchApi();
           return "Searching.....";

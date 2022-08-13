@@ -1,21 +1,23 @@
 import React from "react";
 import "./Weather.css";
 import "./App.css";
+import PrettyDate from "./PrettyDate";
 
 
 function Weather(props) {
+  
+
 return(
        <div className="container"> 
-     
+     <PrettyDate epochDay={props.data.date} />
        
-       <h1>{props.data.city}, {props.data.country}</h1>
        <div className="row bg-white p-4">
         <div className="col-md-3">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuF48SdIZwtV02HTxw1xEHWBs4PoL9eN3bqYCsb89iH-2KSpjdJvs33hLoUxuCgIRk1HM&usqp=CAU" className="card-img" alt="sunshine"/>
         </div>
         <div className="col-md-4">
           <div className="card-body">
-            <h5 className="card-title mb-4">Tuesday 3:55PM</h5>
+          <h1 className="card-title mb-4">{props.data.city}, {props.data.country}</h1> 
             <div className="main-temperature-and-units"><span className="card-text main-temperature">{Math.round(props.data.temperature)}</span>
             <span className="temperature-units">°F</span></div>
             <p className="card-text mt-2">Mostly Sunny</p>
