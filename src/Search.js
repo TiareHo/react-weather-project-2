@@ -8,6 +8,7 @@ export default function Search(props) {
   const [city, setCity]=useState(props.defaultCity);
     
 function handleResponse(response) {
+  console.log(response.data);
   setWeatherData({
     ready:true,
     city:response.data.name,
@@ -18,6 +19,7 @@ function handleResponse(response) {
     barometer:response.data.main.pressure,
     wind:response.data.wind.speed,
     wind_direction: response.data.wind.deg,
+    country: response.data.sys.country,
   });}
   
   function handleSubmit(event){

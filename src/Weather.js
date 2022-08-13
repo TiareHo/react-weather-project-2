@@ -8,7 +8,7 @@ return(
        <div className="container"> 
      
        
-       <h1>{props.data.city}</h1>
+       <h1>{props.data.city}, {props.data.country}</h1>
        <div className="row bg-white p-4">
         <div className="col-md-3">
           <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuF48SdIZwtV02HTxw1xEHWBs4PoL9eN3bqYCsb89iH-2KSpjdJvs33hLoUxuCgIRk1HM&usqp=CAU" className="card-img" alt="sunshine"/>

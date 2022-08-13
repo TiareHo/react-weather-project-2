@@ -33,7 +33,14 @@ button:hover {
 
 @media only screen and (min-width: 700px) {
     form {
-        font-size:15px;
+        
         max-width: 390px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    input[placeholder] {
+        font-size:15px;
+        line-height: 30px;
     }
 }
