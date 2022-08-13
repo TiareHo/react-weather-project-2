@@ -17,20 +17,20 @@ return(
         <div className="main-temperature-and-units"><span className="card-text main-temperature">{Math.round(props.data.temperature)}</span>
             <span className="temperature-units">°F</span></div>
         </div>
-        <div className="col-md-4">
+        <div className="col-md-3">
           <div className="card-body">
           <img src={props.data.iconUrl} className="card-img" alt={props.data.description} />
             
             <p className="card-text mt-2 description">{props.data.description}</p>
           </div>
         </div>
-        <div className="col-md-5">
+        <div className="col-md-6">
           <ul className="list-group">
-            <li className="list-group-item">High:  {Math.round(props.data.temp_max)}°</li>
-            <li className="list-group-item">Low:  {Math.round(props.data.temp_min)}°</li>
-            <li className="list-group-item">Wind:  {Math.round(props.data.wind)} mph @ {props.data.wind_direction}°</li>
-            <li className="list-group-item">Humidity:  {props.data.humidity}%</li>
-            <li className="list-group-item">Barometer:   {Math.round(props.data.barometer*0.02953)} inHg</li>
+            <li className="list-group-item">High:  <strong>{Math.round(props.data.temp_max)}°</strong></li>
+            <li className="list-group-item">Low:  <strong>{Math.round(props.data.temp_min)}°</strong></li>
+            <li className="list-group-item">Wind:  <strong>{Math.round(props.data.wind)} mph</strong> @ <strong>{props.data.wind_direction}°</strong></li>
+            <li className="list-group-item">Humidity:  <strong>{props.data.humidity}%</strong></li>
+            <li className="list-group-item">Barometer:   <strong>{Math.round(props.data.barometer*0.02953)} inHg</strong></li>
           </ul>
         </div>
        </div>

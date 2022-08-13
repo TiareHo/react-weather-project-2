@@ -18,13 +18,14 @@ span.temperature-units {
 img {
     max-height:150px;
     max-width: 150px;
-    margin: 0 auto;
-    display:block;
-   
+  
+  
 }
+
 div.row {
     border-radius: 10px;
 }
+
 
 p.description {
     text-transform: capitalize;
@@ -33,7 +34,7 @@ p.description {
     
 }
 footer {
-    padding-top: 10px;
+    padding-top: 20px;
     color: grey;
 }
 @media only screen and (max-width: 767px) {
@@ -59,5 +60,13 @@ footer {
     img {
         max-height:100px;
         max-width: 100px;}
+    ul {
+        max-width: 250px;
+        display: block;
+        margin: 0 auto;
+    }
+    li {
+        text-align: center;
+    }
     
 }
