@@ -11,7 +11,8 @@ export default function Search(props) {
   
 
 function handleResponse(response) {
-  console.log(response.data.dt);
+  console.log(response.data);
+  let iconName=response.data.weather[0].icon;
   setWeatherData({
     ready:true,
     city:response.data.name,
@@ -24,8 +25,9 @@ function handleResponse(response) {
     wind_direction: response.data.wind.deg,
     country: response.data.sys.country,
     date: response.data.dt,
-  });
-}
+    iconUrl: "http://openweathermap.org/img/wn/"+(iconName)+"@2x.png",
+    description: response.data.weather[0].description,
+  })}
   
   function handleSubmit(event){
     event.preventDefault();

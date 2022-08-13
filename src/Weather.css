@@ -1,9 +1,9 @@
 div.container {
-    max-width:800px;
+    max-width:700px;
 }
 span.main-temperature {
     font-size: 85px;
-    line-height: 100px;;
+    line-height: 55px;;
     color: var(--accent-color);
 }
 
@@ -11,13 +11,13 @@ span.temperature-units {
    color: grey;
    position: relative;
    top: -40px;
-   line-height: 100px;
+   line-height: 85px;
    display:inline-block;
   
 }
 img {
-    max-height:300px;
-    max-width: 300px;
+    max-height:150px;
+    max-width: 150px;
     margin: 0 auto;
     display:block;
    
@@ -25,12 +25,19 @@ img {
 div.row {
     border-radius: 10px;
 }
+
+p.description {
+    text-transform: capitalize;
+    text-align: center;
+    font-size: 20px;
+    
+}
 footer {
     padding-top: 10px;
     color: grey;
 }
 @media only screen and (max-width: 767px) {
-    img {
+    p.description {
        display:none;
     }
     div.container {
@@ -38,9 +45,19 @@ footer {
     }
     p, div.main-temperature-and-units {
         text-align: center;
+        padding-top: 15px;
+        
+        
+    }
+    span.main-temperature, span.temperature-units {
+        line-height: 30px;
+        
     }
     ul {
         padding-top: 20px;
     }
+    img {
+        max-height:100px;
+        max-width: 100px;}
     
 }
