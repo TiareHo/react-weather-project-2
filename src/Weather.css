@@ -3,36 +3,48 @@ div.container {
 }
 span.main-temperature {
     font-size: 85px;
-    line-height: 55px;;
+    line-height: 85px;;
     color: var(--accent-color);
 }
 
 span.temperature-units {
    color: grey;
    position: relative;
-   top: -40px;
+   top: -45px;
    line-height: 85px;
    display:inline-block;
   
 }
-img {
-    max-height:150px;
-    max-width: 150px;
-  
-  
-}
 
+img {
+    max-height:100px;
+    max-width: 100px;
+    position: relative;
+    top:-25px;
+}
+li.description {
+    text-transform: capitalize;
+    text-align: center;
+
+    
+}
+div.image-and-description {
+    display:block;
+    padding-left: none;
+   
+}
 div.row {
     border-radius: 10px;
 }
 
-
-p.description {
+ul span {
+    position: relative;
+    top:-4px;
     text-transform: capitalize;
-    text-align: center;
-    font-size: 20px;
-    
+    font-size: 10px;
 }
+
+
 footer {
     padding-top: 20px;
     color: grey;

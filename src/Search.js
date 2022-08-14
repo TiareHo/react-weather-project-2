@@ -40,7 +40,7 @@ function handleResponse(response) {
 
   function searchApi() {
       const apiKey = "032e8a8762076f19419119384173a976";
-      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+      let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
       axios.get(apiUrl).then(handleResponse);
     }
 
