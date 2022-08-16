@@ -19,7 +19,7 @@ function showFahrenheit (event){
        <span> 
         <span className="card-text main-temperature">{Math.round(props.imperial)}</span>
             <span className="temperature-units"> <strong>°F</strong> / 
-                <a href="/" onClick={showCelcius}>°C</a>
+                <a href="/" class="unit-link" onClick={showCelcius}>°C</a>
             </span>
        </span>
     )
@@ -29,7 +29,7 @@ function showFahrenheit (event){
             <span> 
             <span className="card-text main-temperature">{Math.round(metric)}</span>
                 <span className="temperature-units">
-                     <a href="/" onClick={showFahrenheit}>°F</a> / <strong>°C</strong>
+                     <a href="/" class="unit-link" onClick={showFahrenheit}>°F</a> / <strong>°C</strong>
                 </span>
            </span>
         )

@@ -1,4 +1,4 @@
-a {
+a.unit-link {
+    color:grey;
     text-decoration: none;
-   color:inherit;
 }

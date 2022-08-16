@@ -13,8 +13,11 @@ span.temperature-units {
    top: -45px;
    line-height: 85px;
    display:inline-block;
+   
   
 }
+
+
 
 img {
     max-height:100px;
@@ -49,6 +52,13 @@ footer {
     padding-top: 20px;
     color: grey;
 }
+footer a {
+    color:var(--eggplant-color);
+}
+footer a:hover{
+    font-weight: bold;
+}
+
 @media only screen and (max-width: 767px) {
     p.description {
        display:none;
