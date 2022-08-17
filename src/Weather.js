@@ -31,7 +31,11 @@ return(
             <li className="list-group-item">Barometer:   <strong>{Math.round(props.data.barometer*0.02953)} inHg</strong></li>
           </ul>
         </div>
-        <WeatherForecast forecast={props.data.iconUrl}/>
+        <WeatherForecast 
+            forecastIconUrl={props.data.iconUrl} 
+            latitude={props.data.latitude} 
+            longitude={props.data.longitude}
+            apiKey={props.data.apiKey}/>
        </div>
        
         <footer>This page is open-sourced via <a href="https://github.com/TiareHo/react-weather-project-2" target="_blank" rel="noopener noreferrer">GitHub {" "}</a>

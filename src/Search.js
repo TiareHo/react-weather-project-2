@@ -8,10 +8,8 @@ export default function Search(props) {
   const [weatherData, setWeatherData]=useState({ready:false});
   const [city, setCity]=useState(props.defaultCity);
  
-  
-
 function handleResponse(response) {
-  console.log(response.data);
+  
   let iconName=response.data.weather[0].icon;
   setWeatherData({
     ready:true,
@@ -27,6 +25,9 @@ function handleResponse(response) {
     date: response.data.dt,
     iconUrl: "http://openweathermap.org/img/wn/"+(iconName)+"@2x.png",
     description: response.data.weather[0].description,
+    longitude: response.data.coord.lon,
+    latitude: response.data.coord.lat,
+    apiKey: "032e8a8762076f19419119384173a976",
   })}
   
   function handleSubmit(event){
