@@ -4,7 +4,7 @@ import "./PrettyDate.css";
 function PrettyDate(props) {
 
 let normalDay=new Date(props.epochDay*1000);
-console.log(normalDay);
+
 let days =["Sunday", "Monday", "Tuesday", "Wednesday","Thursday","Friyay!","Saturday"]
 
 let hours=normalDay.getHours();

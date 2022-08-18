@@ -32,10 +32,12 @@ function handleResponse(response) {
   
   function handleSubmit(event){
     event.preventDefault();
+    
     searchApi();
   }
 
-  function updateCity(event) {
+  function updateCity (event) {
+    console.log(event.target.value);
     setCity(event.target.value);
   }
 
@@ -56,9 +58,8 @@ function handleResponse(response) {
                   </form>
           </div>
           <Weather data={weatherData} />
-        
           </div>);} else {
           searchApi();
-          return "Searching.....";
+          return ("Searching.....");
         }
       }
