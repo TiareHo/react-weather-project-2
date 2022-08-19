@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import "./WeatherForecast.css";
+import ForecastedDay from "./ForecastedDay";
 import axios from "axios";
 
 function WeatherForecast(props) {
@@ -9,25 +10,21 @@ const [forecast, setForecast]=useState(" ");
 
     function handleResponse (response) {
         setForecasted(true);
-        setForecast(response.data);
+        setForecast(response.data.list);
+ 
+        
     }
 
-   
-
     if (forecasted) {
-        console.log(forecast);
-        let iconName= (forecast.list[0].weather[0].icon);
-        let iconUrl="http://openweathermap.org/img/wn/"+(iconName)+"@2x.png";
-
+        
         return (
         <div className="weather-forecast">
             <div className="row">
                 <div className="col text-center">
-                    <div>
-                     <div>Day</div>
-                     < img className="forecast-icon" src={iconUrl} alt={forecast.list[0].weather[0].description}/> 
-                     <div><span className="WeatherForecast-temperature-high">{Math.round(forecast.list[0].main.temp_max)}°H |</span><span className="WeatherForecast-temperature-low"> {Math.round(forecast.list[0].main.temp_min)}°L</span></div>
-                    </div>
+                    <ForecastedDay  data={forecast[0]}/>
+                    <ForecastedDay  data={forecast[1]}/>
+                    <ForecastedDay  data={forecast[2]}/>
+                    
                 </div>
             </div>
         </div>
