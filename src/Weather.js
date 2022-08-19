@@ -32,7 +32,7 @@ return(
           </ul>
         </div>
         <WeatherForecast 
-            forecastIconUrl={props.data.iconUrl} 
+            
             latitude={props.data.latitude} 
             longitude={props.data.longitude}
             apiKey={props.data.apiKey}/>
