@@ -1,4 +1,5 @@
 import React from "react";
+import "./DaylightHours.css";
 
 export default function DaylightHours (props) {
    
@@ -24,7 +25,7 @@ export default function DaylightHours (props) {
     }
 
     return(
-       <div className="p-2 small pb-3">
+       <div className="p-2 small pb-3 daylight-hours">
        <div>{sunrise()} | {sunset()}</div>
        </div>
     );

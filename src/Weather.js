@@ -36,6 +36,7 @@ return(
             <li className="list-group-item">Humidity:  <strong>{props.data.humidity} %</strong></li>
           </ul>
         </div>
+        <p className="forecast-title">FORECAST:</p>
         <WeatherForecast 
             latitude={props.data.latitude} 
             longitude={props.data.longitude}
