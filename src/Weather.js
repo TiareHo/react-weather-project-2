@@ -4,14 +4,17 @@ import "./App.css";
 import PrettyDate from "./PrettyDate";
 import MainTemperature from "./MainTemperature";
 import WeatherForecast from "./WeatherForecast";
-
+import DaylightHours from "./DaylightHours";
 
 function Weather(props) {
   
+  
   if (props.data.country==="US"){props.data.country=" ";}
+  
+  
 return(
        <div className="container"> 
-    <PrettyDate epochDay={props.data.date} />
+        <PrettyDate epochDay={props.data.date} />
        
        <div className="row bg-white p-4">
         <div className="col-md-6">
@@ -19,7 +22,7 @@ return(
         
         <div className="main-temperature-and-units"> <img src={props.data.iconUrl} className="card-img" alt={props.data.description} />
         <MainTemperature imperial={props.data.temperature} /></div>
-       
+        <DaylightHours sunrise={props.data.sunrise} sunset={props.data.sunset}/>
         </div>
         <div className="col-md-6">
           <ul className="list-group">

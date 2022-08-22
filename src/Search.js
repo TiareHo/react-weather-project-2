@@ -11,6 +11,7 @@ export default function Search(props) {
 function handleResponse(response) {
   
   let iconName=response.data.weather[0].icon;
+  console.log(response.data.sys.sunrise);
   setWeatherData({
     ready:true,
     city:response.data.name,
@@ -28,6 +29,8 @@ function handleResponse(response) {
     longitude: response.data.coord.lon,
     latitude: response.data.coord.lat,
     apiKey: "032e8a8762076f19419119384173a976",
+    sunrise:response.data.sys.sunrise,
+    sunset:response.data.sys.sunset,
   })}
   
   function handleSubmit(event){
