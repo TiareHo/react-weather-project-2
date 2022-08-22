@@ -9,7 +9,7 @@ function day() {
     let day = date.getDay();
      
     let days=["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-
+console.log(day);
     return (<div>{days[day]}</div>);
 }
 

@@ -32,7 +32,6 @@ return(
           </ul>
         </div>
         <WeatherForecast 
-            
             latitude={props.data.latitude} 
             longitude={props.data.longitude}
             apiKey={props.data.apiKey}/>

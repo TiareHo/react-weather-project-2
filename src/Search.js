@@ -37,7 +37,7 @@ function handleResponse(response) {
   }
 
   function updateCity (event) {
-    console.log(event.target.value);
+    
     setCity(event.target.value);
   }
 
