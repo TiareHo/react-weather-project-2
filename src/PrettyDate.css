@@ -1,8 +1,7 @@
 
-#updated {
-    font-weight: lighter; 
-}
+
 p {
-    padding: 15px 10px 2px 15px;
+    padding: 0px 10px 2px 15px;
+    font-size: 15px;
     
 }

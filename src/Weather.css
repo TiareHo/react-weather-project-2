@@ -1,6 +1,10 @@
 div.container {
     max-width:700px;
 }
+
+h1{
+   padding-left: 10px;
+}
 span.main-temperature {
     font-size: 85px;
     line-height: 85px;;
@@ -12,12 +16,8 @@ span.temperature-units {
    position: relative;
    top: -45px;
    line-height: 85px;
-   display:inline-block;
-   
-  
+   display:inline-block; 
 }
-
-
 
 img {
     max-height:100px;
@@ -25,11 +25,13 @@ img {
     position: relative;
     top:-25px;
 }
-li.description {
+li {
     text-transform: capitalize;
     text-align: center;
+}
 
-    
+li.description{
+    text-transform: uppercase;
 }
 div.image-and-description {
     display:block;
@@ -50,6 +52,7 @@ ul span {
 
 footer {
     padding-top: 20px;
+    padding-bottom: 10px;
     color: grey;
 }
 footer a {

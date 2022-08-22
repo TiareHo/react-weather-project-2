@@ -14,24 +14,25 @@ function Weather(props) {
   
 return(
        <div className="container"> 
-        <PrettyDate epochDay={props.data.date} />
        
-       <div className="row bg-white p-4">
+       
+       <div className="row bg-white pt-4">
         <div className="col-md-6">
-        <h1 className="card-title mb-4">{props.data.city} {props.data.country}</h1> 
+        <h1 className="card-title">{props.data.city} {props.data.country}</h1> 
+        <PrettyDate epochDay={props.data.date} />
         
         <div className="main-temperature-and-units"> <img src={props.data.iconUrl} className="card-img" alt={props.data.description} />
         <MainTemperature imperial={props.data.temperature} /></div>
         <DaylightHours sunrise={props.data.sunrise} sunset={props.data.sunset}/>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-6 mt-3">
           <ul className="list-group">
-            <li className="list-group-item description"> {props.data.description}:</li>
-            <li className="list-group-item">High:  <strong>{Math.round(props.data.temp_max)}°</strong><span>f</span></li>
-            <li className="list-group-item">Low:  <strong>{Math.round(props.data.temp_min)}°</strong><span>f</span></li>
+            <li className="list-group-item description"> {props.data.description}</li>
+            <li className="list-group-item">High:  <strong>{Math.round(props.data.temp_max)}°</strong><span>f </span> 
+              / Low:   <strong>{Math.round(props.data.temp_min)}°</strong><span>f</span></li>
             <li className="list-group-item">Wind:  <strong>{Math.round(props.data.wind)} mph</strong> @ <strong>{props.data.wind_direction}°</strong></li>
-            <li className="list-group-item">Humidity:  <strong>{props.data.humidity}%</strong></li>
             <li className="list-group-item">Barometer:   <strong>{Math.round(props.data.barometer*0.02953)} inHg</strong></li>
+            <li className="list-group-item">Humidity:  <strong>{props.data.humidity}%</strong></li>
           </ul>
         </div>
         <WeatherForecast 

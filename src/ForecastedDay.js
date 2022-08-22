@@ -1,5 +1,5 @@
 import React from "react";
-
+import "./ForecastedDay.css";
 
 function ForecastedDay(props) {
 
@@ -21,16 +21,16 @@ function icon() {
 function high() {
     let highTemperature=Math.round(props.data.main.temp_max);
     return (
-        <span className="WeatherForecast-temperature-high">{highTemperature}°H |</span>
+        <span className="WeatherForecast-temperature-high small">{highTemperature}°H |</span>
         );
 }
 
 function low() {
     let lowTemperature=Math.round(props.data.main.temp_min);
-    return ( <span className="WeatherForecast-temperature-low"> {lowTemperature}°L</span>);
+    return ( <span className="WeatherForecast-temperature-low small"> {lowTemperature}°L</span>);
 }
     return (
-        <div className="col-3">
+        <div className="col-md pt-4 pb-3 forecasted-column">
         {day()}
         {icon()}
         <div>{high()} {low()}</div>

@@ -24,7 +24,7 @@ useEffect(()=>{
         return (
         <div className="weather-forecast">
             <div className="row">
-                <div className="row text-center pt-5 pb-3">
+                <div className="row text-center pb-3 m-0 pt-3">
                     <ForecastedDay  data={forecast[8]}/>
                     <ForecastedDay  data={forecast[16]}/>
                     <ForecastedDay  data={forecast[24]}/>

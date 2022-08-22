@@ -18,7 +18,7 @@ if (minutes<10){minutes="0"+ normalDay.getMinutes();}
         <div>
            
         
-         <p><span id="updated">Last updated: </span> <span>{days[normalDay.getDay()]} {hours}{minutes}:</span></p>
+         <p> <span>{days[normalDay.getDay()]} {hours}{minutes}:</span></p>
          
         
         </div>
