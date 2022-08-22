@@ -5,6 +5,7 @@ import PrettyDate from "./PrettyDate";
 import MainTemperature from "./MainTemperature";
 import WeatherForecast from "./WeatherForecast";
 import DaylightHours from "./DaylightHours";
+import Footer from "./Footer";
 
 function Weather(props) {
   
@@ -25,7 +26,7 @@ return(
         <MainTemperature imperial={props.data.temperature} /></div>
         <DaylightHours sunrise={props.data.sunrise} sunset={props.data.sunset}/>
         </div>
-        <div className="col-md-6 mt-3">
+        <div className="col-md-6 mt-4">
           <ul className="list-group">
             <li className="list-group-item description"> {props.data.description}</li>
             <li className="list-group-item">High:  <strong>{Math.round(props.data.temp_max)}°</strong><span>f </span> 
@@ -40,15 +41,8 @@ return(
             longitude={props.data.longitude}
             apiKey={props.data.apiKey}/>
        </div>
-       
-        <footer>This page is open-sourced via <a href="https://github.com/TiareHo/react-weather-project-2" target="_blank" rel="noopener noreferrer">GitHub {" "}</a>
-             and hosted on {" "}         
-           <a href="https://reactjs.org" 
-            target="_blank"
-            rel="noopener noreferrer">
-            Netlify
-           </a>
-          </footer>
+       <Footer />
+
           </div>
     );} 
 

@@ -11,7 +11,7 @@ export default function Search(props) {
 function handleResponse(response) {
   
   let iconName=response.data.weather[0].icon;
-  console.log(response.data.sys.sunrise);
+ 
   setWeatherData({
     ready:true,
     city:response.data.name,

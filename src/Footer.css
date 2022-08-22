@@ -1,0 +1,11 @@
+footer {
+    padding-top: 20px;
+    padding-bottom: 10px;
+   
+}
+footer a {
+    color:var(--eggplant-color);
+}
+footer a:hover{
+    font-weight: bold;
+}
