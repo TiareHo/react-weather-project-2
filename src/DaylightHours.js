@@ -24,7 +24,7 @@ export default function DaylightHours (props) {
     }
 
     return(
-       <div className="text-center small pb-3">
+       <div className="p-2 small pb-3">
        <div>{sunrise()} | {sunset()}</div>
        </div>
     );

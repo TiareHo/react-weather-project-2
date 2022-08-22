@@ -28,10 +28,13 @@ img {
     top:-25px;
 }
 li {
-    text-transform: capitalize;
+  
     text-align: center;
 }
 
+strong.high-and-low {
+    color:orangered;
+}
 li.description{
     text-transform: uppercase;
 }

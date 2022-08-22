@@ -28,12 +28,12 @@ return(
         </div>
         <div className="col-md-6 mt-4">
           <ul className="list-group">
-            <li className="list-group-item description"> {props.data.description}</li>
-            <li className="list-group-item">High:  <strong>{Math.round(props.data.temp_max)}°</strong><span>f </span> 
-              / Low:   <strong>{Math.round(props.data.temp_min)}°</strong><span>f</span></li>
-            <li className="list-group-item">Wind:  <strong>{Math.round(props.data.wind)} mph</strong> @ <strong>{props.data.wind_direction}°</strong></li>
+            <li className="list-group-item description"> {props.data.description}:</li>
+            <li className="list-group-item">High:  <strong className="high-and-low">{Math.round(props.data.temp_max)}</strong><span>°f </span> 
+              | Low:   <strong className="high-and-low">{Math.round(props.data.temp_min)}</strong><span>°f</span></li>
+            <li className="list-group-item">Wind:  <strong>{Math.round(props.data.wind)} mph</strong><small> @</small> <strong>{props.data.wind_direction}</strong>°</li>
             <li className="list-group-item">Barometer:   <strong>{Math.round(props.data.barometer*0.02953)} inHg</strong></li>
-            <li className="list-group-item">Humidity:  <strong>{props.data.humidity}%</strong></li>
+            <li className="list-group-item">Humidity:  <strong>{props.data.humidity} %</strong></li>
           </ul>
         </div>
         <WeatherForecast 
