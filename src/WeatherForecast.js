@@ -20,18 +20,18 @@ const [forecast, setForecast]=useState(" ");
         return (
         <div className="weather-forecast">
             <div className="row">
-                <div className="col text-center">
-                    <ForecastedDay  data={forecast[5]}/>
-                    <ForecastedDay  data={forecast[13]}/>
-                    <ForecastedDay  data={forecast[21]}/>
-                    <ForecastedDay  data={forecast[27]}/>
+                <div className="row text-center pt-5 pb-3">
+                    <ForecastedDay  data={forecast[8]}/>
+                    <ForecastedDay  data={forecast[16]}/>
+                    <ForecastedDay  data={forecast[24]}/>
+                    <ForecastedDay  data={forecast[32]}/>
                     
                 </div>
             </div>
         </div>
     );}else{ 
         let forecastApiKey= (props.apiKey);
-        let forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${props.latitude}&lon=${props.longitude}&cnt=28&appid=${forecastApiKey}&units=imperial`;
+        let forecastApiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${props.latitude}&lon=${props.longitude}&cnt=33&appid=${forecastApiKey}&units=imperial`;
         axios.get(forecastApiUrl).then(handleResponse);
         return (null);}
 }

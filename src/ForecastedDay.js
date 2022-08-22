@@ -30,7 +30,7 @@ function low() {
     return ( <span className="WeatherForecast-temperature-low"> {lowTemperature}°L</span>);
 }
     return (
-        <div>
+        <div className="col-3">
         {day()}
         {icon()}
         <div>{high()} {low()}</div>
